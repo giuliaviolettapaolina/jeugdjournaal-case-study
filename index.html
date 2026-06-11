@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Reimagining How Children Experience the News</title>
+  <title>Giulia de Goede</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -17,280 +17,99 @@
       max-width: 640px;
       margin: 0 auto;
       padding: 80px 24px 120px;
-      text-align: left;
     }
 
     /* Header */
-    .header { margin-bottom: 40px; }
+    .header {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 40px;
+    }
 
     .header h1 {
       font-size: clamp(28px, 5vw, 48px);
       font-weight: 700;
       line-height: 1.15;
-      margin-bottom: 12px;
     }
 
     .header p {
-      font-size: clamp(16px, 2.5vw, 20px);
-      line-height: 1.4;
+      font-size: clamp(16px, 2.5vw, 24px);
       font-weight: 400;
-    }
-
-    /* Divider */
-    hr {
-      border: none;
-      border-top: 1px solid #000;
-      margin: 40px 0;
-      opacity: 0.2;
-    }
-
-    /* Meta row */
-    .meta {
-      display: flex;
-      gap: 48px;
-      flex-wrap: wrap;
-      margin-bottom: 40px;
-    }
-
-    .meta-block { display: flex; flex-direction: column; gap: 6px; }
-
-    .meta-block .label {
-      font-size: 16px;
-      font-weight: 700;
-    }
-
-    .meta-block .value {
-      font-size: 16px;
       line-height: 1.5;
     }
 
+    .header a {
+      text-decoration: underline;
+      text-underline-position: from-font;
+    }
 
-    /* Section */
-    .section { margin-bottom: 40px; }
-
-    .section-title {
-      font-size: 16px;
+    /* Resume link */
+    .resume-link {
+      display: inline-block;
+      font-size: clamp(15px, 2vw, 20px);
       font-weight: 700;
-      margin-bottom: 16px;
+      color: #333;
+      text-decoration: underline;
+      text-underline-position: from-font;
+      margin-bottom: 40px;
     }
 
-    .section p,
-    .section li {
-      font-size: clamp(15px, 2vw, 18px);
-      line-height: 1.6;
-      font-weight: 400;
+    /* Case studies section */
+    .case-studies {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
     }
 
-    .section p + p { margin-top: 1em; }
-
-    .subsection-title {
-      font-size: clamp(15px, 2vw, 18px);
-      font-weight: 700;
-      margin-top: 1.4em;
-      margin-bottom: 4px;
+    hr {
+      border: none;
+      border-top: 1px solid rgba(0, 0, 0, 0.2);
+      margin-bottom: 20px;
     }
 
-    .section ul {
-      padding-left: 20px;
-      list-style: disc;
-      margin-top: 4px;
-    }
-
-    .section ul li { margin-bottom: 6px; }
-    .section ul li:last-child { margin-bottom: 0; }
-
-    /* Read more block */
-    .read-more {
-      display: block;
-      margin-top: 40px;
-      padding: 32px 0;
-      border-top: 1px solid rgba(0,0,0,0.2);
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .read-more:hover .read-more-title {
-      opacity: 0.6;
-    }
-
-    .read-more-label {
+    .case-studies-label {
       font-size: 13px;
       font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       color: #999;
-      margin-bottom: 8px;
     }
 
-    .read-more-title {
+    .case-study-link {
+      display: block;
       font-size: clamp(18px, 3vw, 24px);
       font-weight: 700;
+      color: #333;
+      text-decoration: none;
       line-height: 1.2;
-      transition: opacity 0.2s ease;
     }
 
-    /* Images aligned with dividers */
-    .bleed-wrap {
-      margin: 40px 0;
-      display: flex;
-      justify-content: center;
-    }
+    .case-study-link:hover { opacity: 0.6; }
 
-    .bleed-wrap img {
-      width: 100%;
-      max-height: 450px;
-      object-fit: cover;
-      display: block;
-    }
-
-    @media (min-width: 688px) {
-      .bleed-wrap {
-        margin: 40px -80px;
-      }
-
-      .bleed-wrap img {
-        width: 800px;
-        max-width: none;
-        margin: 0;
-      }
+    .case-study-link.coming-soon {
+      opacity: 0.2;
+      pointer-events: none;
     }
   </style>
 </head>
 <body>
   <main class="page">
 
-    <!-- Header -->
     <div class="header">
-      <h1>Reimagining How Children Experience the News</h1>
-      <p>Redesigning the Jeugdjournaal app to create a more intuitive, accessible, and engaging news experience for young audiences</p>
+      <h1>Giulia de Goede</h1>
+      <p>Digital Product Designer since 2020, with 4+ years designing editorial and streaming products at <a href="https://nos.nl" style="color:#e61e14;">NOS</a> (Dutch Public News Broadcasting). I'm part of the Digital Media department (Digital Product Development &amp; Engineering), working across audience-focused brands including NOS Jeugdjournaal, NOS Stories, <a href="https://teletekst-nieuws.nos.nl" style="color:#0000fd;">NOS Teletekst</a>, and <a href="https://nos.nl/nieuwsuur" style="color:#016bff;">Nieuwsuur</a>, mainly on the <a href="jeugdjournaal-app.html" style="color:#009e5f;">Jeugdjournaal app</a> and <a href="jeugdjournaal.html" style="color:#009e5f;">website</a>, and the <a href="#" style="color:#6b21e4;">NOS Stories website</a>. I collaborate in a multidisciplinary team with a Product Owner and five web/app engineers.</p>
     </div>
 
-    <hr />
+    <a class="resume-link" href="#">Resume</a>
 
-    <!-- Meta -->
-    <div class="meta">
-      <div class="meta-block">
-        <span class="label">Product</span>
-        <span class="value">Android, iOS</span>
-      </div>
-      <div class="meta-block">
-        <span class="label">Skills</span>
-        <span class="value">User research, design sprint facilitation, interactive prototyping, UX/UI design, usability testing</span>
-      </div>
+    <div class="case-studies">
+      <hr />
+      <p class="case-studies-label">Case Studies</p>
+      <a class="case-study-link" href="jeugdjournaal-app.html">Reimagining How Children Experience the News →</a>
+      <a class="case-study-link" href="jeugdjournaal.html">Bringing the Classroom Into Focus →</a>
+      <a class="case-study-link coming-soon" href="#">Where Teenagers Come to Understand the World →</a>
     </div>
-
-    <hr />
-
-    <!-- Image 1 -->
-    <div class="bleed-wrap">
-      <img src="images/1.4.png" alt="Jeugdjournaal app overview" />
-    </div>
-
-    <!-- Problem -->
-    <div class="section">
-      <p class="section-title">Problem</p>
-      <p>Jeugdjournaal had built a strong editorial reputation for delivering reliable, age-appropriate news to children in the Netherlands — yet it was becoming unclear whether the product was still meeting the needs of its young audience. As children's digital behaviour continued to evolve rapidly, the team recognised an opportunity to better understand what their audience needed from a news experience and how the platform could more effectively reflect the quality of the journalism behind it.</p>
-      <p>The central challenge was to deepen that understanding — designing an experience that would not only reach more children, but do so in a way that supported their news literacy, respected their cognitive development, and felt trustworthy to the parents, caretakers, and teachers around them.</p>
-    </div>
-
-    <!-- Image 2 -->
-    <div class="bleed-wrap">
-      <img src="images/1.5.png" alt="Research process" />
-    </div>
-
-    <!-- Research -->
-    <div class="section">
-      <p class="section-title">Research</p>
-      <p class="subsection-title">Design Sprint</p>
-      <p>A brainstorming session was facilitated with the Jeugdjournaal team, bringing together the head editor, online editors, and news reporters. The goal was to understand how public news broadcasters across Europe were approaching digital outreach to children, and to map out the capabilities within the Jeugdjournaal team to engage young audiences in the Netherlands in a meaningful and interactive way. A key insight from this session was that while the team's editorial process and way of working were already of a high standard, the product itself was not doing justice enough to their efforts.</p>
-
-      <p class="subsection-title">Expert Interviews</p>
-      <p>Individual interviews were conducted with the product owners of the Danish children's news platform and the Dutch public broadcasting children's programming division, with the aim of learning from their experiences and outcomes. One of the most significant takeaways was that the word "news" can carry a serious connotation that does not always naturally attract children — unless they already have a personal connection to the subject or a strong affinity with the brand.</p>
-      <p>Additional interviews were held with academic researchers specialising in cognitive development and digital media, several of whom focused specifically on children. These conversations were essential in ensuring that the end product would not simply drive reach, but would also support news literacy — while remaining something that parents, caretakers, and teachers could feel comfortable with.</p>
-
-      <p class="subsection-title">User Research</p>
-      <p>Individual interviews and focus group sessions were conducted with children between the ages of 11 and 12. Eight schools were visited across a range of settings — from cities to villages and across different educational systems — to ensure a broad and representative perspective. The research aimed to build a deeper understanding of how children use their phones and what they truly need from a news experience.</p>
-      <p>Alongside the interviews and focus groups, a product audit was carried out to identify what was already working well and should be preserved, as well as what had the potential to be brought more prominently to the foreground to better serve the audience.</p>
-
-      <p class="subsection-title">Desk Research</p>
-      <p>To complement the primary research, a thorough review of literature on developmental psychology and the teenage brain was undertaken. This provided a stronger theoretical foundation for interpreting findings from the child interviews and for informing the validation of prototypes in later stages of the process.</p>
-    </div>
-
-    <!-- Findings -->
-    <div class="section">
-      <p class="section-title">Findings</p>
-
-      <p class="subsection-title">Children</p>
-      <p>Children expressed a strong desire to participate in and contribute to the news. The reporters at Jeugdjournaal held a status similar to that of role models or idols in their eyes, which created a natural motivation to engage and be heard.</p>
-
-      <p class="subsection-title">Jeugdjournaal team</p>
-      <p>The editorial team actively welcomed and celebrated any form of participation from their young audience. Children's contributions played a direct role in shaping content — comments and reactions from viewers were regularly incorporated into both the morning and evening news, with the morning broadcast in particular dedicating space to responses from children on current news subjects.</p>
-    </div>
-
-    <!-- User research sessions — after "current news subjects" -->
-    <div class="bleed-wrap">
-      <img src="images/1.6.png" alt="User research sessions" />
-    </div>
-
-    <div class="section">
-      <p class="subsection-title">Jeugdjournaal app</p>
-      <ul>
-        <li>Articles varied significantly in content type, with some centered around text, others built around video, and others designed around interactive polls</li>
-        <li>Video content spanned a wide range of formats, from long-form informational pieces and in-house productions to short-form snackable content</li>
-        <li>Children frequently had questions about the topics they encountered but lacked a clear and accessible way to direct those questions to the editorial team</li>
-      </ul>
-    </div>
-
-    <!-- Solution -->
-    <div class="section">
-      <p class="section-title">Solution</p>
-
-      <p class="subsection-title">Curated News Flow</p>
-      <ul>
-        <li>Introduced a content-type hierarchy that surfaces the most prominent element of each article, giving children an immediate sense of what to expect</li>
-        <li>Redesigned the article view to give each piece full focus, presenting one article at a time for a less cluttered, more immersive reading experience</li>
-        <li>Developed a curated, balanced news flow with a defined endpoint — replacing the anxiety of an endless scroll with a sense of completion</li>
-        <li>Created a time-of-day content model, tailoring the news experience to when and how children consume media throughout the day</li>
-      </ul>
-    </div>
-
-    <!-- Design solutions — after "media throughout the day" -->
-    <div class="bleed-wrap">
-      <img src="images/2.19.png" alt="Design solutions" />
-    </div>
-
-    <!-- Digital Comment Literacy -->
-    <div class="section">
-      <p class="section-title">Digital Comment Literacy</p>
-      <ul>
-        <li>Introduced a comment section across all articles, giving children a structured channel to ask questions and follow up on topics that sparked their curiosity. To ensure a safe and supportive environment, a dedicated team of online editors actively moderates all comments, ensuring that children are protected from harmful or inappropriate content and that the integrity of the article itself is never compromised.</li>
-        <li>Before participating, children are required to read and agree to a set of house rules, establishing clear expectations around respectful and constructive engagement from the outset. Additionally, children are encouraged to create a username that does not directly reference their real name or surname — giving them the freedom to explore and experiment with commenting in a safe space, and allowing them to gradually develop their own voice and sense of comment literacy within a secure digital environment.</li>
-      </ul>
-    </div>
-
-    <!-- Comment literacy feature — after "secure digital environment" -->
-    <div class="bleed-wrap">
-      <img src="images/2.17.png" alt="Comment literacy feature" />
-    </div>
-
-    <!-- Areas to Explore -->
-    <div class="section">
-      <p class="section-title">Areas to Explore</p>
-      <ul>
-        <li>Introducing accessibility-focused reading features to better support children who struggle with reading, with a primary focus on those with dyslexia and children for whom Dutch is a second language</li>
-        <li>Developing a comment literacy framework by applying labels — such as "constructive comment" or "thoughtful comment" — to pinned comments, helping children understand and model the qualities of meaningful online discussion</li>
-      </ul>
-    </div>
-
-    <!-- Areas to explore — after "online discussion" -->
-    <div class="bleed-wrap">
-      <img src="images/2.18.png" alt="Areas to explore" />
-    </div>
-
-    <a class="read-more" href="jeugdjournaal.html">
-      <p class="read-more-label">Next case study</p>
-      <p class="read-more-title">Bringing the Classroom Into Focus →</p>
-    </a>
 
   </main>
 </body>

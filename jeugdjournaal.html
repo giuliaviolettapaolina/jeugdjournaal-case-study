@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bringing the Classroom Into Focus</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #FAFAFA;
+      color: #333333;
+    }
+
+    .page {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 80px 24px 120px;
+      text-align: left;
+    }
+
+    /* Header */
+    .header { margin-bottom: 40px; }
+
+    .header h1 {
+      font-size: clamp(28px, 5vw, 48px);
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+
+    .header p {
+      font-size: clamp(16px, 2.5vw, 20px);
+      line-height: 1.4;
+      font-weight: 400;
+    }
+
+    /* Divider */
+    hr {
+      border: none;
+      border-top: 1px solid #000;
+      margin: 40px 0;
+      opacity: 0.2;
+    }
+
+    /* Meta row */
+    .meta {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+
+    .meta-block { display: flex; flex-direction: column; gap: 6px; }
+
+    .meta-block .label {
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .meta-block .value {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    /* Section */
+    .section { margin-bottom: 40px; }
+
+    .section-title {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .section p,
+    .section li {
+      font-size: clamp(15px, 2vw, 18px);
+      line-height: 1.6;
+      font-weight: 400;
+    }
+
+    .section p + p { margin-top: 1em; }
+
+    .section ul {
+      padding-left: 20px;
+      list-style: disc;
+      margin-top: 4px;
+    }
+
+    .section ul li { margin-bottom: 6px; }
+    .section ul li:last-child { margin-bottom: 0; }
+
+    /* Read more block */
+    .read-more {
+      display: block;
+      margin-top: 40px;
+      padding: 32px 0;
+      border-top: 1px solid #000;
+      border-top-opacity: 0.2;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .read-more:hover .read-more-title {
+      opacity: 0.6;
+    }
+
+    .read-more-label {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 8px;
+    }
+
+    .read-more-title {
+      font-size: clamp(18px, 3vw, 24px);
+      font-weight: 700;
+      line-height: 1.2;
+      transition: opacity 0.2s ease;
+    }
+
+    /* Full-bleed images */
+    .bleed-wrap {
+      margin: 40px 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .bleed-wrap img {
+      width: 100%;
+      max-height: 450px;
+      object-fit: cover;
+      display: block;
+    }
+
+    @media (min-width: 688px) {
+      .bleed-wrap {
+        margin: 40px -80px;
+      }
+
+      .bleed-wrap img {
+        width: 800px;
+        max-width: none;
+        margin: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+
+    <div class="header">
+      <h1>Bringing the Classroom Into Focus</h1>
+      <p>Redesigning the Jeugdjournaal website to better serve teachers and students in the modern classroom</p>
+    </div>
+
+    <hr />
+
+    <div class="meta">
+      <div class="meta-block">
+        <span class="label">Product</span>
+        <span class="value">Web</span>
+      </div>
+      <div class="meta-block">
+        <span class="label">Skills</span>
+        <span class="value">User research, design sprint facilitation,<br />interactive prototyping, UX/UI design, usability testing</span>
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="bleed-wrap">
+      <img src="https://www.figma.com/api/mcp/asset/4bd1c403-6cfd-4466-a887-0cd1222a211d" alt="Jeugdjournaal website redesign overview" loading="lazy" />
+    </div>
+
+    <div class="section">
+      <p class="section-title">Problem</p>
+      <p>The website was originally designed for desktop use, but a decade later it had become primarily a classroom tool, accessed daily on digital whiteboards. Teachers relied on it to kick off the morning news and to use its articles as a medium for building news literacy among their students.</p>
+    </div>
+
+    <div class="section">
+      <p class="section-title">Research</p>
+      <p>A survey was distributed to 128 teachers, caretakers, and parents to understand their needs and expectations when accessing the Jeugdjournaal website on a digital whiteboard or smart TV. This was complemented by in-depth interviews with 10 primary school teachers and 20 parents, exploring their individual use cases and the challenges they face around digital media consumption and news overload.</p>
+    </div>
+
+    <div class="section">
+      <p class="section-title">Findings</p>
+      <ul>
+        <li>The website's chronological content structure caused in-house productions to quickly get buried whenever there was a high volume of news to publish</li>
+        <li>Teachers visited the website every morning for the daily news ritual, which occasionally sparked chaos in the classroom when students spotted an article about their favorite football club</li>
+        <li>Teachers regularly searched for video-based articles to play during lunch breaks, when students ate together in the classroom</li>
+        <li>Classrooms would collectively comment on articles together, creating a distinctive and organic form of joint comment literacy that teachers facilitated across the Netherlands</li>
+      </ul>
+    </div>
+
+    <div class="bleed-wrap">
+      <img src="https://www.figma.com/api/mcp/asset/b9ce9724-a02a-4671-919e-d0c970770ae1" alt="Research findings" loading="lazy" />
+    </div>
+
+    <div class="section">
+      <p class="section-title">Solution</p>
+      <ul>
+        <li>Restructured the experience around two key daily moments: the morning and evening news</li>
+        <li>Introduced subject tagging to articles, mirroring the playlist structure Jeugdjournaal already used on their YouTube channel</li>
+        <li>Added content-type labels to help teachers quickly identify and filter for video-based articles</li>
+        <li>Gave prominent placement to Jeugdjournaal's in-house productions on the front page</li>
+      </ul>
+    </div>
+
+    <div class="bleed-wrap">
+      <img src="https://www.figma.com/api/mcp/asset/3e3475dd-6aeb-4958-af73-aac83a8a7925" alt="Solution design screens" loading="lazy" />
+    </div>
+
+    <div class="section">
+      <ul>
+        <li>Designed the poll to be more interactive — intended for active use on digital whiteboards.</li>
+        <li>Reader comments were moved next to the article, so they can be read without disrupting reading (or watching a video).</li>
+      </ul>
+    </div>
+
+    <div class="bleed-wrap">
+      <img src="https://www.figma.com/api/mcp/asset/4f571dda-950f-48fa-8e40-34ccea485c3b" alt="Interactive poll and comments design" loading="lazy" />
+    </div>
+
+    <div class="section">
+      <p class="section-title">Areas We'd Like to Explore</p>
+      <ul>
+        <li>Making the morning and evening news more interactive, moving beyond simply publishing the broadcast video</li>
+        <li>Creating space for short-form content that offers a lighter counterpoint to more article-heavy topics</li>
+        <li>Enriching search results to surface more meaningful context, rather than passively listing articles</li>
+      </ul>
+    </div>
+
+    <a class="read-more" href="https://giuliaviolettapaolina.github.io/jeugdjournaal-case-study/" target="_blank" rel="noopener">
+      <p class="read-more-label">Next case study</p>
+      <p class="read-more-title">Reimagining How Children Experience the News →</p>
+    </a>
+
+  </main>
+</body>
+</html>

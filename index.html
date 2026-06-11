@@ -135,6 +135,36 @@
     .section ul li { margin-bottom: 6px; }
     .section ul li:last-child { margin-bottom: 0; }
 
+    /* Read more block */
+    .read-more {
+      display: block;
+      margin-top: 40px;
+      padding: 32px 0;
+      border-top: 1px solid rgba(0,0,0,0.2);
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .read-more:hover .read-more-title {
+      opacity: 0.6;
+    }
+
+    .read-more-label {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 8px;
+    }
+
+    .read-more-title {
+      font-size: clamp(18px, 3vw, 24px);
+      font-weight: 700;
+      line-height: 1.2;
+      transition: opacity 0.2s ease;
+    }
+
     /* Images aligned with dividers */
     .bleed-wrap {
       margin: 40px 0;
@@ -278,6 +308,11 @@
     <div class="bleed-wrap">
       <img src="images/img5.jpg" alt="Areas to explore" />
     </div>
+
+    <a class="read-more" href="jeugdjournaal.html">
+      <p class="read-more-label">Next case study</p>
+      <p class="read-more-title">Bringing the Classroom Into Focus →</p>
+    </a>
 
   </main>
 </body>

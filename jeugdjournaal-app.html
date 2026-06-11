@@ -47,8 +47,8 @@
     /* Meta row */
     .meta {
       display: flex;
-      gap: 48px;
-      flex-wrap: wrap;
+      flex-direction: column;
+      gap: 24px;
       margin-bottom: 40px;
     }
 
@@ -62,18 +62,6 @@
     .meta-block .value {
       font-size: 16px;
       line-height: 1.5;
-    }
-
-    @media (min-width: 688px) {
-      .bleed-wrap {
-        margin: 40px -80px;
-      }
-
-      .bleed-wrap img {
-        width: 800px;
-        max-width: none;
-        margin: 0;
-      }
     }
 
     /* Section */
@@ -121,6 +109,45 @@
       max-height: 450px;
       object-fit: cover;
       display: block;
+    }
+
+    @media (min-width: 688px) {
+      .bleed-wrap {
+        margin: 40px -80px;
+      }
+      .bleed-wrap img {
+        width: 800px;
+        max-width: none;
+        margin: 0;
+      }
+    }
+
+    /* Read more block */
+    .read-more {
+      display: block;
+      margin-top: 40px;
+      padding: 32px 0;
+      border-top: 1px solid rgba(0,0,0,0.2);
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .read-more:hover .read-more-title { opacity: 0.6; }
+
+    .read-more-label {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 8px;
+    }
+
+    .read-more-title {
+      font-size: clamp(18px, 3vw, 24px);
+      font-weight: 700;
+      line-height: 1.2;
+      transition: opacity 0.2s ease;
     }
   </style>
 </head>
@@ -209,10 +236,22 @@
       </ul>
     </div>
 
-    <!-- Solution -->
+    <!-- Solution part 1 -->
     <div class="section">
       <p class="section-title">Solution</p>
+      <p class="subsection-title">Curated News Flow</p>
+      <ul>
+        <li>Introduced a content-type hierarchy that surfaces the most prominent element of each article, giving children an immediate sense of what to expect</li>
+        <li>Redesigned the article view to give each piece full focus, presenting one article at a time for a less cluttered, more immersive reading experience</li>
+      </ul>
+    </div>
 
+    <div class="bleed-wrap">
+      <img src="images/2.19.png" alt="Curated news flow design" />
+    </div>
+
+    <!-- Solution part 2 -->
+    <div class="section">
       <p class="subsection-title">Curated News Flow</p>
       <ul>
         <li>Introduced a content-type hierarchy that surfaces the most prominent element of each article, giving children an immediate sense of what to expect</li>
@@ -222,9 +261,8 @@
       </ul>
     </div>
 
-    <!-- Design solutions — after "media throughout the day" -->
     <div class="bleed-wrap">
-      <img src="images/2.19.png" alt="Design solutions" />
+      <img src="images/2.17.png" alt="Comment literacy feature" />
     </div>
 
     <!-- Digital Comment Literacy -->
@@ -236,9 +274,8 @@
       </ul>
     </div>
 
-    <!-- Comment literacy feature — after "secure digital environment" -->
     <div class="bleed-wrap">
-      <img src="images/2.17.png" alt="Comment literacy feature" />
+      <img src="images/2.18.png" alt="Areas to explore" />
     </div>
 
     <!-- Areas to Explore -->
@@ -250,10 +287,10 @@
       </ul>
     </div>
 
-    <!-- Areas to explore — after "online discussion" -->
-    <div class="bleed-wrap">
-      <img src="images/2.18.png" alt="Areas to explore" />
-    </div>
+    <a class="read-more" href="jeugdjournaal.html">
+      <p class="read-more-label">Next case study</p>
+      <p class="read-more-title">Bringing the Classroom Into Focus →</p>
+    </a>
 
   </main>
 </body>

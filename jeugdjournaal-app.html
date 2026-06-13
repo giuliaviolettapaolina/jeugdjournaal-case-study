@@ -4,171 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Reimagining How Children Experience the News</title>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
-      background: #FAFAFA;
-      color: #333333;
-    }
-
-    .page {
-      max-width: 640px;
-      margin: 0 auto;
-      padding: 80px 24px 120px;
-      text-align: left;
-    }
-
-    /* Header */
-    .header { margin-bottom: 40px; }
-
-    .header h1 {
-      font-size: clamp(28px, 5vw, 48px);
-      font-weight: 700;
-      line-height: 1.15;
-      margin-bottom: 12px;
-    }
-
-    .header p {
-      font-size: clamp(16px, 2.5vw, 20px);
-      line-height: 1.4;
-      font-weight: 400;
-    }
-
-    /* Divider */
-    hr {
-      border: none;
-      border-top: 1px solid #000;
-      margin: 40px 0;
-      opacity: 0.2;
-    }
-
-    /* Meta row */
-    .meta {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-      margin-bottom: 40px;
-    }
-
-    .meta-block { display: flex; flex-direction: column; gap: 6px; }
-
-    .meta-block .label {
-      font-size: 16px;
-      font-weight: 700;
-    }
-
-    .meta-block .value {
-      font-size: 16px;
-      line-height: 1.5;
-    }
-
-    /* Section */
-    .section { margin-bottom: 40px; }
-
-    .section-title {
-      font-size: 16px;
-      font-weight: 700;
-      margin-bottom: 16px;
-    }
-
-    .section p,
-    .section li {
-      font-size: clamp(15px, 2vw, 18px);
-      line-height: 1.6;
-      font-weight: 400;
-    }
-
-    .section p + p { margin-top: 1em; }
-
-    .subsection-title {
-      font-size: clamp(15px, 2vw, 18px);
-      font-weight: 700;
-      margin-top: 1.4em;
-      margin-bottom: 4px;
-    }
-
-    .section ul {
-      padding-left: 20px;
-      list-style: disc;
-      margin-top: 4px;
-    }
-
-    .section ul li { margin-bottom: 6px; }
-    .section ul li:last-child { margin-bottom: 0; }
-
-    .bleed-wrap {
-      margin: 40px 0;
-      display: flex;
-      justify-content: center;
-    }
-
-    .bleed-wrap img {
-      width: 100%;
-      max-height: 450px;
-      object-fit: cover;
-      display: block;
-    }
-
-    @media (min-width: 688px) {
-      .bleed-wrap {
-        margin: 40px -80px;
-      }
-      .bleed-wrap img {
-        width: 800px;
-        max-width: none;
-        margin: 0;
-      }
-    }
-
-    /* Read more block */
-    .read-more {
-      display: block;
-      margin-top: 40px;
-      padding: 32px 0;
-      border-top: 1px solid rgba(0,0,0,0.2);
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .read-more:hover .read-more-title { opacity: 0.6; }
-
-    .read-more-label {
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #999;
-      margin-bottom: 8px;
-    }
-
-    .read-more-title {
-      font-size: clamp(18px, 3vw, 24px);
-      font-weight: 700;
-      line-height: 1.2;
-      transition: opacity 0.2s ease;
-    }
-
-    .home-link {
-      position: fixed;
-      top: 24px;
-      left: 24px;
-      font-size: 16px;
-      font-weight: 700;
-      color: #333;
-      text-decoration: none;
-      z-index: 10;
-    }
-
-    .home-link:hover { opacity: 0.6; }
-  </style>
+  <link rel="stylesheet" href="case-study.css" />
 </head>
 <body>
-  <a class="home-link" href="index.html">Giulia de Goede</a>
+  <a class="home-link" href="index.html">← Giulia de Goede</a>
   <main class="page">
 
-    <!-- Header -->
     <div class="header">
       <h1>Reimagining How Children Experience the News</h1>
       <p>Redesigning the Jeugdjournaal app to create a more intuitive, accessible, and engaging news experience for young audiences</p>
@@ -176,7 +17,6 @@
 
     <hr />
 
-    <!-- Meta -->
     <div class="meta">
       <div class="meta-block">
         <span class="label">Product</span>
@@ -190,24 +30,20 @@
 
     <hr />
 
-    <!-- Image 1 -->
     <div class="bleed-wrap">
       <img src="images/1.4.png" alt="Jeugdjournaal app overview" />
     </div>
 
-    <!-- Problem -->
     <div class="section">
       <p class="section-title">Problem</p>
       <p>Jeugdjournaal had built a strong editorial reputation for delivering reliable, age-appropriate news to children in the Netherlands — yet it was becoming unclear whether the product was still meeting the needs of its young audience. As children's digital behaviour continued to evolve rapidly, the team recognised an opportunity to better understand what their audience needed from a news experience and how the platform could more effectively reflect the quality of the journalism behind it.</p>
       <p>The central challenge was to deepen that understanding — designing an experience that would not only reach more children, but do so in a way that supported their news literacy, respected their cognitive development, and felt trustworthy to the parents, caretakers, and teachers around them.</p>
     </div>
 
-    <!-- Image 2 -->
     <div class="bleed-wrap">
       <img src="images/1.5.png" alt="Research process" />
     </div>
 
-    <!-- Research -->
     <div class="section">
       <p class="section-title">Research</p>
       <p class="subsection-title">Design Sprint</p>
@@ -225,7 +61,6 @@
       <p>To complement the primary research, a thorough review of literature on developmental psychology and the teenage brain was undertaken. This provided a stronger theoretical foundation for interpreting findings from the child interviews and for informing the validation of prototypes in later stages of the process.</p>
     </div>
 
-    <!-- Findings -->
     <div class="section">
       <p class="section-title">Findings</p>
 
@@ -236,7 +71,6 @@
       <p>The editorial team actively welcomed and celebrated any form of participation from their young audience. Children's contributions played a direct role in shaping content — comments and reactions from viewers were regularly incorporated into both the morning and evening news, with the morning broadcast in particular dedicating space to responses from children on current news subjects.</p>
     </div>
 
-    <!-- User research sessions — after "current news subjects" -->
     <div class="bleed-wrap">
       <img src="images/1.6.png" alt="User research sessions" />
     </div>
@@ -250,7 +84,6 @@
       </ul>
     </div>
 
-    <!-- Solution -->
     <div class="section">
       <p class="section-title">Solution</p>
       <p class="subsection-title">Curated News Flow</p>
@@ -275,7 +108,6 @@
       <img src="images/2.19.png" alt="Clock and mobile mockups showing time-of-day content model" />
     </div>
 
-    <!-- Digital Comment Literacy -->
     <div class="section">
       <p class="section-title">Digital Comment Literacy</p>
       <ul>
@@ -288,7 +120,6 @@
       <img src="images/2.17.png" alt="Comment literacy feature" />
     </div>
 
-    <!-- Areas to Explore -->
     <div class="section">
       <p class="section-title">Areas to Explore</p>
       <ul>

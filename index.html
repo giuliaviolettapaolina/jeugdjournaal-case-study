@@ -7,89 +7,141 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+    :root {
+      --bg: #FAFAFA;
+      --text: #1a1a1a;
+      --muted: #6b6b6b;
+      --rule: rgba(0,0,0,0.12);
+      --accent: #1a1a1a;
+    }
+
     body {
-      font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
-      background: #FAFAFA;
-      color: #333333;
+      font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
     }
 
     .page {
       max-width: 640px;
       margin: 0 auto;
-      padding: 80px 24px 120px;
+      padding: clamp(60px, 10vw, 100px) 24px clamp(80px, 12vw, 140px);
     }
 
-    /* Header */
+    /* ── Header ─────────────────────────────────────── */
     .header {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      margin-bottom: 40px;
+      margin-bottom: 48px;
     }
 
     .header h1 {
-      font-size: clamp(28px, 5vw, 48px);
+      font-size: clamp(30px, 5.5vw, 52px);
       font-weight: 700;
-      line-height: 1.15;
-    }
-
-    .header p {
-      font-size: 20px;
-      font-weight: 400;
-      line-height: 1.5;
-    }
-
-    .header a {
-      text-decoration: underline;
-      text-underline-position: from-font;
-    }
-
-    /* Resume link */
-    .resume-link {
-      display: inline-block;
-      font-size: clamp(15px, 2vw, 20px);
-      font-weight: 700;
-      color: #333;
-      text-decoration: underline;
-      text-underline-position: from-font;
-      margin-bottom: 40px;
-    }
-
-    /* Case studies section */
-    .case-studies {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    hr {
-      border: none;
-      border-top: 1px solid rgba(0, 0, 0, 0.2);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
       margin-bottom: 20px;
     }
 
-    .case-studies-label {
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #999;
+    .header p {
+      font-size: clamp(15px, 2.2vw, 18px);
+      font-weight: 400;
+      line-height: 1.7;
+      color: var(--muted);
     }
 
-    .case-study-link {
-      display: block;
-      font-size: clamp(18px, 3vw, 24px);
-      font-weight: 700;
-      color: #333;
+    .header a {
+      color: inherit;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+      transition: color 0.15s ease;
+    }
+
+    .header a:hover { color: var(--link-color, var(--muted)); }
+
+    /* ── Resume link ─────────────────────────────────── */
+    .resume-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--text);
       text-decoration: none;
-      line-height: 1.2;
+      border: 1.5px solid var(--rule);
+      border-radius: 6px;
+      padding: 8px 16px;
+      margin-bottom: 56px;
+      transition: border-color 0.15s ease, background 0.15s ease;
     }
 
-    .case-study-link:hover { opacity: 0.6; }
+    .resume-link:hover {
+      border-color: var(--text);
+      background: rgba(0,0,0,0.04);
+    }
 
-    .case-study-link.coming-soon {
-      opacity: 0.2;
+    /* ── Case studies ────────────────────────────────── */
+    .case-studies-header {
+      margin-bottom: 0;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .case-studies-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .case-studies {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .case-study-item {
+      display: block;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--rule);
+      text-decoration: none;
+      color: var(--text);
+      transition: padding-left 0.2s ease;
+    }
+
+    .case-study-item:first-child { border-top: 1px solid var(--rule); }
+
+    .case-study-item:hover { padding-left: 6px; }
+
+    .case-study-title {
+      font-size: clamp(17px, 2.8vw, 22px);
+      font-weight: 700;
+      line-height: 1.25;
+      letter-spacing: -0.01em;
+      margin-bottom: 4px;
+    }
+
+    .case-study-meta {
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 400;
+    }
+
+    .case-study-item.coming-soon {
+      opacity: 0.25;
       pointer-events: none;
+    }
+
+    /* ── Footer ──────────────────────────────────────── */
+    .footer {
+      margin-top: 64px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .footer a {
+      color: inherit;
+      text-underline-offset: 3px;
     }
   </style>
 </head>
@@ -98,18 +150,35 @@
 
     <div class="header">
       <h1>Giulia de Goede</h1>
-      <p>Digital Product Designer since 2020, with 4+ years designing editorial and streaming products at <a href="https://nos.nl" style="color:#e61e14;" target="_blank" rel="noopener">NOS</a> (Dutch Public News Broadcasting). I'm part of the Digital Media department (Digital Product Development &amp; Engineering), working across audience-focused brands including NOS Jeugdjournaal, NOS Stories, <a href="https://apps.apple.com/nl/app/nos-teletekst/id289246732" style="color:#0000fd;" target="_blank" rel="noopener">NOS Teletekst</a>, and <a href="https://nos.nl/nieuwsuur" style="color:#016bff;" target="_blank" rel="noopener">Nieuwsuur</a>, mainly on the <a href="https://apps.apple.com/nl/app/nos-jeugdjournaal/id319038532" style="color:#009e5f;" target="_blank" rel="noopener">Jeugdjournaal app</a> and <a href="https://jeugdjournaal.nl" style="color:#009e5f;" target="_blank" rel="noopener">website</a>, and the <a href="https://stories.nos.nl/" style="color:#6b21e4;" target="_blank" rel="noopener">NOS Stories website</a>. I collaborate in a multidisciplinary team with a Product Owner and five web/app engineers.</p>
+      <p>Digital Product Designer since 2020, with 4+ years designing editorial and streaming products at <a href="https://nos.nl" style="--link-color:#e61e14;" target="_blank" rel="noopener">NOS</a> (Dutch Public News Broadcasting). I'm part of the Digital Media department (Digital Product Development &amp; Engineering), working across audience-focused brands including NOS Jeugdjournaal, NOS Stories, <a href="https://apps.apple.com/nl/app/nos-teletekst/id289246732" style="--link-color:#0000fd;" target="_blank" rel="noopener">NOS Teletekst</a>, and <a href="https://nos.nl/nieuwsuur" style="--link-color:#016bff;" target="_blank" rel="noopener">Nieuwsuur</a>, mainly on the <a href="https://apps.apple.com/nl/app/nos-jeugdjournaal/id319038532" style="--link-color:#009e5f;" target="_blank" rel="noopener">Jeugdjournaal app</a> and <a href="https://jeugdjournaal.nl" style="--link-color:#009e5f;" target="_blank" rel="noopener">website</a>, and the <a href="https://stories.nos.nl/" style="--link-color:#6b21e4;" target="_blank" rel="noopener">NOS Stories website</a>. I collaborate in a multidisciplinary team with a Product Owner and five web/app engineers.</p>
     </div>
 
-    <a class="resume-link" href="Giulia_resume.pdf" target="_blank" rel="noopener">Resume</a>
+    <a class="resume-link" href="Giulia_resume.pdf" target="_blank" rel="noopener">
+      Resume ↗
+    </a>
+
+    <div class="case-studies-header">
+      <span class="case-studies-label">Case Studies</span>
+    </div>
 
     <div class="case-studies">
-      <hr />
-      <p class="case-studies-label">Case Studies</p>
-      <a class="case-study-link" href="jeugdjournaal-app.html">Reimagining How Children Experience the News →</a>
-      <a class="case-study-link" href="jeugdjournaal.html">Bringing the Classroom Into Focus →</a>
-      <a class="case-study-link" href="stories.html">Where Teenagers Come to Understand the World →</a>
+      <a class="case-study-item" href="jeugdjournaal-app.html">
+        <div class="case-study-title">Reimagining How Children Experience the News →</div>
+        <div class="case-study-meta">Jeugdjournaal · UX Research · App Redesign</div>
+      </a>
+      <a class="case-study-item" href="jeugdjournaal.html">
+        <div class="case-study-title">Bringing the Classroom Into Focus →</div>
+        <div class="case-study-meta">Jeugdjournaal · UX Research · Web Redesign</div>
+      </a>
+      <a class="case-study-item" href="stories.html">
+        <div class="case-study-title">Where Teenagers Come to Understand the World →</div>
+        <div class="case-study-meta">Stories · UI/UX Design · Web Redesign</div>
+      </a>
     </div>
+
+    <footer class="footer">
+      <p>Giulia de Goede &mdash; <a href="mailto:giuliavpdegoede@gmail.com">giuliavpdegoede@gmail.com</a></p>
+    </footer>
 
   </main>
 </body>

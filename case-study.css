@@ -153,7 +153,7 @@ hr {
   max-height: 500px;
   object-fit: cover;
   display: block;
-  border-radius: 8px;
+  border-radius: 0;
 }
 
 @media (min-width: 688px) {
@@ -161,7 +161,7 @@ hr {
   .bleed-wrap img {
     width: 800px;
     max-width: none;
-    border-radius: 10px;
+    border-radius: 0;
   }
 }
 

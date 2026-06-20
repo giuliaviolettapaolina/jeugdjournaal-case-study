@@ -45,7 +45,7 @@
     .avatar-hover {
       position: fixed;
       width: 180px;
-      border-radius: 12px;
+      border-radius: 0;
       box-shadow: 0 8px 32px rgba(0,0,0,0.18);
       pointer-events: none;
       opacity: 0;
@@ -85,7 +85,7 @@
       color: var(--text);
       text-decoration: none;
       border: 1.5px solid var(--rule);
-      border-radius: 6px;
+      border-radius: 0;
       padding: 8px 16px;
       margin-bottom: 56px;
       transition: border-color 0.15s ease, background 0.15s ease;
@@ -128,6 +128,15 @@
     .case-study-item:first-child { border-top: 1px solid var(--rule); }
 
     .case-study-item:hover { padding-left: 6px; }
+
+    .case-study-thumbnail {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      border-radius: 0;
+      display: block;
+      margin-bottom: 14px;
+    }
 
     .case-study-title {
       font-size: clamp(17px, 2.8vw, 22px);
@@ -179,16 +188,19 @@
 
     <div class="case-studies">
       <a class="case-study-item" href="jeugdjournaal-app.html">
+        <img class="case-study-thumbnail" src="images/thumbnail_jjapp.png" alt="Jeugdjournaal app redesign thumbnail" />
         <div class="case-study-title">Reimagining How Children Experience the News →</div>
-        <div class="case-study-meta">Jeugdjournaal · UX Research · App Redesign</div>
+        <div class="case-study-meta">NOS Jeugdjournaal · UX Research · App Redesign</div>
       </a>
       <a class="case-study-item" href="jeugdjournaal.html">
+        <img class="case-study-thumbnail" src="images/thumbnail_jjweb.png" alt="Jeugdjournaal website redesign thumbnail" />
         <div class="case-study-title">Bringing the Classroom Into Focus →</div>
-        <div class="case-study-meta">Jeugdjournaal · UX Research · Web Redesign</div>
+        <div class="case-study-meta">NOS Jeugdjournaal · UX Research · Web Redesign</div>
       </a>
       <a class="case-study-item" href="stories.html">
+        <img class="case-study-thumbnail" src="images/thumbnail_stweb.png" alt="NOS Stories website redesign thumbnail" />
         <div class="case-study-title">Where Teenagers Come to Understand the World →</div>
-        <div class="case-study-meta">Stories · UI/UX Design · Web Redesign</div>
+        <div class="case-study-meta">NOS Stories · UI/UX Design · Web Redesign</div>
       </a>
     </div>
 
@@ -201,24 +213,15 @@
   <script>
     const heading = document.getElementById('name-heading');
     const avatar = document.getElementById('avatar');
-    const offsets = [
-      { x: 20, y: -160 }, { x: -200, y: -140 }, { x: 60, y: 10 },
-      { x: -180, y: 20 }, { x: 30, y: -120 }, { x: -160, y: -60 }
-    ];
-    let current = 0;
-
     heading.addEventListener('mouseenter', (e) => {
-      const o = offsets[current % offsets.length];
-      current++;
-      avatar.style.left = (e.clientX + o.x) + 'px';
-      avatar.style.top = (e.clientY + o.y) + 'px';
+      avatar.style.left = (e.clientX - 180) + 'px';
+      avatar.style.top = (e.clientY + 16) + 'px';
       avatar.classList.add('visible');
     });
 
     heading.addEventListener('mousemove', (e) => {
-      const o = offsets[(current - 1) % offsets.length];
-      avatar.style.left = (e.clientX + o.x) + 'px';
-      avatar.style.top = (e.clientY + o.y) + 'px';
+      avatar.style.left = (e.clientX - 180) + 'px';
+      avatar.style.top = (e.clientY + 16) + 'px';
     });
 
     heading.addEventListener('mouseleave', () => {

@@ -129,25 +129,12 @@ hr {
 .section p + p { margin-top: 1em; }
 
 .section ul {
-  padding-left: 0;
-  list-style: none;
+  padding-left: 20px;
+  list-style: disc;
   margin-top: 8px;
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
-
-.section ul li {
-  padding-left: 16px;
-  position: relative;
-}
-
-.section ul li::before {
-  content: '—';
-  position: absolute;
-  left: 0;
-  color: var(--muted);
-  font-size: 14px;
 }
 
 /* ── Images ──────────────────────────────────────── */

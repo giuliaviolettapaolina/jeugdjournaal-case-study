@@ -15,6 +15,16 @@
       --accent: #1a1a1a;
     }
 
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #111111;
+        --text: #f0f0f0;
+        --muted: #888888;
+        --rule: rgba(255,255,255,0.12);
+        --accent: #f0f0f0;
+      }
+    }
+
     body {
       font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
       background: var(--bg);
